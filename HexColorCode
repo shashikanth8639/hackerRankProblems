@@ -1,0 +1,8 @@
+import re
+n = int(input())
+for i in range(n):
+    a = input()
+    if(len(a) > 4 and '{' not in a):
+        ma = re.findall(r'#[A-Fa-f0-9]{3,6}',a)
+        for m in ma:
+            print(m)
